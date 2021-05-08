@@ -16,9 +16,11 @@ app.use(express.json())
 app.use(cors())
 
 app.use("/users", userRouter)
-// app.route('/auth/register')
+app.get('/',(req,res)=>{
+    res.end("hello at home ")
+})
 //     .post(userHandlers.register);
-app.listen(3013,(err)=>{
+app.listen(3000,(err)=>{
     if (err) console.log("error in connecting")
     else
         console.log("connected successfully on port 3000")
